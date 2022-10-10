@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Sketch from "react-p5";
 
-export default function ReactScetch(p) {
+export default function ReactSketch({ ...p }) {
     const setup = (p, parent) => {
         p.createCanvas(500, 500).parent(parent);
     }

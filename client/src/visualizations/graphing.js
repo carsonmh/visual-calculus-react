@@ -176,5 +176,3 @@ function playButton() {
     triangle(-r, -r, r, 0, -r, r);
     pop();
 }
-
-export default { mobile }
