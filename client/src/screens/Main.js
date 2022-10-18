@@ -32,17 +32,20 @@ function Main({ setItem, setTitle }) {
                                 title="Area Under the Curve"
                                 urlName="tangent-line-slope"
                             />
-                            <ItemLink setItem={setItem}
+                            <ItemLink
+                                setItem={setItem}
                                 setTitle={setTitle}
                                 title="Negative and Positive Area"
                                 urlName="tangent-line-slope"
                             />
-                            <ItemLink setItem={setItem}
+                            <ItemLink
+                                setItem={setItem}
                                 setTitle={setTitle}
                                 title="Polar Area"
                                 urlName="tangent-line-slope"
                             />
-                            <ItemLink setItem={setItem}
+                            <ItemLink
+                                setItem={setItem}
                                 setTitle={setTitle}
                                 title="Arc Length of a Function"
                                 urlName="tangent-line-slope"
@@ -51,12 +54,14 @@ function Main({ setItem, setTitle }) {
                     </li>
                     <li class="topics-item"><span class="caret">3D Volumes and Vectors</span>
                         <ul>
-                            <ItemLink setItem={setItem}
+                            <ItemLink
+                                setItem={setItem}
                                 setTitle={setTitle}
                                 title="Graph of square root rotated about x-axis"
                                 urlName="tangent-line-slope"
                             />
-                            <ItemLink setItem={setItem}
+                            <ItemLink
+                                setItem={setItem}
                                 setTitle={setTitle}
                                 title="3D Vectors"
                                 urlName="tangent-line-slope"
@@ -65,7 +70,8 @@ function Main({ setItem, setTitle }) {
                     </li>
                     <li class="topics-item"><span class="caret">Differential Equations</span>
                         <ul>
-                            <ItemLink setItem={setItem}
+                            <ItemLink
+                                setItem={setItem}
                                 setTitle={setTitle}
                                 title="Euler's Method"
                                 urlName="tangent-line-slope"
