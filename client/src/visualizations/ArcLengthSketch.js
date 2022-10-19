@@ -13,35 +13,36 @@ function ArcLengthSketch(props) {
   let time = 0;
   let dt = 0.5;
   let paused = true;
-  const graph = new Graph();
+  let graph;
 
   function setup(p5, parent) {
+    graph = new Graph(p5);
     var f = (x) => p5.sin(x);
     var f1 = (x) => p5.cos(x);
-    let c = graph.getColors(p5);
+    let c = graph.getColors();
     if (graph.mobile === false) {
       p5.createCanvas(w, h1).parent(parent);
     } else {
       p5.createCanvas(w - 40, h1 / 2).parent(parent);
     }
-    graph.setWindow(-0.01, 3 * p5.PI, -3, 3, p5);
+    graph.setWindow(-0.01, 3 * p5.PI, -3, 3);
     p5.background(graph.BGCOLOR);
 
     // axes
     p5.stroke(255, 100);
-    graph.drawAxes(p5);
+    graph.drawAxes();
 
     // grid lines
     p5.stroke(255, 30);
-    graph.drawGridlines(p5);
+    graph.drawGridlines();
 
     // function graph
     p5.strokeWeight(10);
-    p5.stroke(graph.tintColor(p5, c.i, 0.5));
-    graph.graph(p5, f);
+    p5.stroke(graph.tintColor(c.i, 0.5));
+    graph.graph(f);
 
     back = p5.get(0, 0, p5.width, p5.height);
-    graph.playButton(p5);
+    graph.playButton();
     p5.noLoop();
   }
 
@@ -81,9 +82,9 @@ function ArcLengthSketch(props) {
     p5.noStroke();
     p5.fill(255);
     p5.text('n: ' + p5.floor(n), p5.width * 0, 35);
-    p5.text('distance: ' + graph.nround(p5, distance, 3), p5.width * 0.5, 35);
+    p5.text('distance: ' + graph.nround(distance, 3), p5.width * 0.5, 35);
 
-    if (paused) graph.playButton(p5);
+    if (paused) graph.playButton();
   }
 
   // user input
