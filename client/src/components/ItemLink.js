@@ -1,21 +1,13 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import React from 'react';
 
-function ItemLink({ title, urlName, setItem, setTitle }) {
-    function SetData(item, title) {
-        setItem(item)
-        setTitle(title)
-    }
-
-    return (
-        <li class="topics-item">
-            <Link
-                to={"/subItem"}
-                onClick={() => { SetData(urlName, title) }}>
-                {title}
-            </Link>
-        </li>
-    );
+function ItemLink({ item }) {
+  const [title, setTitle] = React.useState(item);
+  return (
+    <li class="topics-item">
+      <Link to={'/sub-item/' + item}>{title}</Link>
+    </li>
+  );
 }
 
 export default ItemLink;

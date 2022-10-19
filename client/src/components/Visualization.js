@@ -1,14 +1,13 @@
-import React from "react";
-import ReactSketch from "../visualizations/ReactSketch";
+import React from 'react';
+import ErrorBoundary from './ErrorBoundary';
+import urlToSketch from '../utils/urlToSketch';
 
-function Visualization({ fileName }) {
-    const filepath = "../visualizations/" + fileName;
-    console.log(filepath);
-    return (
-        <div id="canvas-holder">
-            < ReactSketch />
-        </div>
-    );
+function Visualization({ item }) {
+  return (
+    <div id="canvas-holder">
+      <ErrorBoundary>{urlToSketch[item]}</ErrorBoundary>
+    </div>
+  );
 }
 
 export default Visualization;
