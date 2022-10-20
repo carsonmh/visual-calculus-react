@@ -1,15 +1,17 @@
-// just to initialize the backend for now
-
-const express = require("express");
-
-const PORT = process.env.PORT || 3001;
+const { getData, writeNewUser } = require('./server.js');
+const express = require('express');
+const { makeid } = require('./utils.js');
 
 const app = express();
 
-app.get("/api", (req, res) => {
-    res.json({ message: "Server response" });
+const port = 3001;
+
+app.get('/', (req, res) => {
+  getData(res);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server listening on ${PORT}`);
+app.get('/new-user', (req, res) => {
+  writeNewUser('carson', 'charrell@umd.edu');
 });
+
+app.listen(port, () => console.log('running server on localhost:3001'));
