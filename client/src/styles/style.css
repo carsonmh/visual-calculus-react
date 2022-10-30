@@ -22,7 +22,9 @@ nav {
 
 .nav-item {
   list-style: none;
-  margin-right: 2rem;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -43,7 +45,6 @@ nav {
 }
 
 .nav-item:first-child {
-  margin-top: 0.6rem;
   margin-right: auto;
   margin-left: 2rem;
 }
@@ -90,7 +91,7 @@ a {
 }
 @media only screen and (max-width: 768px) {
   .topics-item {
-    font-size: .75em;
+    font-size: 0.75em;
     margin-bottom: 10px;
     margin-right: 0;
     margin-left: 0;
@@ -170,7 +171,7 @@ hr {
 /* Create the caret/arrow with a unicode, and style it */
 .caret::before {
   font-size: 18pt;
-  content: "\25B6";
+  content: '\25B6';
   color: rgb(255, 255, 255);
   display: inline-block;
   margin-right: 6px;

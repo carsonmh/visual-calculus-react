@@ -1,4 +1,3 @@
-
 let mouseDown = false;
 let paused = true;
 
@@ -8,15 +7,15 @@ let res = 59;
 
 let myFont;
 
-let px = 4, py = 3, pz = 2;
+let px = 4,
+  py = 3,
+  pz = 2;
 let pmx = 0;
 let pmy = 0;
 
-
 function preload() {
-  myFont = loadFont('./Montserrat.ttf');
+  myFont = loadFont("./Montserrat.ttf");
 }
-
 
 function setup() {
   if (mobile === false) {
@@ -24,14 +23,15 @@ function setup() {
   } else {
     createCanvas(windowWidth - 50, windowHeight / 2, WEBGL);
   }
-  setAttributes('premultipliedAlpha', true);
+  setAttributes("premultipliedAlpha", true);
   // colors
   c = getColors();
   noLoop();
 }
 
-
-let sx = 0; sy = 0; sz = 0;
+let sx = 0;
+sy = 0;
+sz = 0;
 
 function draw() {
   if (mobile) {
@@ -43,15 +43,12 @@ function draw() {
   textFont(myFont);
   textAlign(CENTER, CENTER);
 
-
   push();
 
   translate(0, 100, -200);
-  rotateX(-0.1);//map(mouseY, 0, height, -PI, PI));
+  rotateX(-0.1); //map(mouseY, 0, height, -PI, PI));
   rotateY(map(yrot, 0, 450, -PI, PI));
   strokeWeight(3);
-
-
 
   stroke(255);
   const b = 40;
@@ -67,7 +64,6 @@ function draw() {
   line(0, 0, 0, 0, 0, w);
   line(0, 0, b, b, 0, b);
   line(b, 0, b, b, 0, 0);
-
 
   fill(255);
   textSize(25);
@@ -88,7 +84,6 @@ function draw() {
   cone(5, 20);
   pop();
 
-
   push();
   translate(0, 0, w);
   rotateX(PI / 2);
@@ -101,13 +96,16 @@ function draw() {
   text("Z", 0, 0);
   pop();
 
-
-  let dx = 0, dy = 0, dz = 0;
+  let dx = 0,
+    dy = 0,
+    dz = 0;
   const interval = 100;
   if (sx / 50 < px) dx = 2;
   else if (sy / 50 > -py) dy = -1.5;
   else if (sz / 50 < pz) dz = 1.25;
-  sx += dx; sy += dy; sz += dz;
+  sx += dx;
+  sy += dy;
+  sz += dz;
   stroke(c.r);
   line(0, -1, 2, sx, -1, 2);
   stroke(c.o);
@@ -121,9 +119,7 @@ function draw() {
   sphere(10);
   pop();
 
-
   pop();
-
 
   if (mouseIsPressed) {
     if (!mouseDown) smx = mouseX - yrot;
@@ -136,8 +132,6 @@ function draw() {
     pmx = mouseX;
     pmy = mouseY;
   }
-
-
 
   // labels
   textSize(30);
@@ -173,8 +167,6 @@ function draw() {
   pop();
 }
 
-
-
 function mouseClicked() {
   if (paused) {
     paused = false;
@@ -183,7 +175,9 @@ function mouseClicked() {
   }
   mouseDown = false;
   if (pmx != mouseX || pmy != mouseY) return;
-  sx = 0; sy = 0; sz = 0;
+  sx = 0;
+  sy = 0;
+  sz = 0;
   px = floor(random(6)) + 1;
   py = floor(random(6)) + 1;
   pz = floor(random(6)) + 1;
@@ -196,8 +190,6 @@ function touchStarted() {
     return;
   }
 }
-
-
 
 function keyReleased() {
   if (keyCode == 27 && paused == false) {

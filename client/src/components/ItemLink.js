@@ -4,7 +4,7 @@ import React from 'react';
 function ItemLink({ item }) {
   const [title, setTitle] = React.useState(item);
   return (
-    <li class="topics-item">
+    <li className="topics-item">
       <Link to={'/sub-item/' + item}>{title}</Link>
     </li>
   );
