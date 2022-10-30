@@ -14,7 +14,7 @@ let pmx = 0;
 let pmy = 0;
 
 function preload() {
-  myFont = loadFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  myFont = textFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 }
 
 function setup() {
