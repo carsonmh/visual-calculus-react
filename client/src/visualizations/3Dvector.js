@@ -14,7 +14,7 @@ let pmx = 0;
 let pmy = 0;
 
 function preload() {
-  myFont = loadFont("./Montserrat.ttf");
+  myFont = loadFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 }
 
 function setup() {
@@ -23,7 +23,7 @@ function setup() {
   } else {
     createCanvas(windowWidth - 50, windowHeight / 2, WEBGL);
   }
-  setAttributes("premultipliedAlpha", true);
+  setAttributes('premultipliedAlpha', true);
   // colors
   c = getColors();
   noLoop();
@@ -70,7 +70,7 @@ function draw() {
 
   push();
   translate(w, 0, 0);
-  text("X", 40, -4);
+  text('X', 40, -4);
   rotateZ(-PI / 2);
   noStroke();
   cone(5, 20);
@@ -78,7 +78,7 @@ function draw() {
 
   push();
   translate(0, -h, 0);
-  text("Y", 0, -40);
+  text('Y', 0, -40);
   rotateZ(PI);
   noStroke();
   cone(5, 20);
@@ -93,7 +93,7 @@ function draw() {
   push();
   translate(0, 0, w + 40);
   rotateY(PI / 2);
-  text("Z", 0, 0);
+  text('Z', 0, 0);
   pop();
 
   let dx = 0,
@@ -141,23 +141,23 @@ function draw() {
   const mx = floor(sx / 50);
   const my = floor(-sy / 50);
   const mz = floor(sz / 50);
-  let tw = textWidth("( ");
+  let tw = textWidth('( ');
   push();
   translate(width * 0.25, -height * 0.4);
   fill(c.r);
   text(mx, tw, 0);
-  tw += textWidth(mx + ", ");
+  tw += textWidth(mx + ', ');
   fill(c.o);
   text(my, tw, 0);
-  tw += textWidth(my + ", ");
+  tw += textWidth(my + ', ');
   fill(c.i);
   text(mz, tw, 0);
   tw += textWidth(mz);
   fill(255);
-  text("(", 0, 0);
-  text(", ", textWidth("( " + mx), 0);
-  text(", ", textWidth("( " + mx + ", " + my), 0);
-  text(")", tw, 0);
+  text('(', 0, 0);
+  text(', ', textWidth('( ' + mx), 0);
+  text(', ', textWidth('( ' + mx + ', ' + my), 0);
+  text(')', tw, 0);
   pop();
 
   push();
