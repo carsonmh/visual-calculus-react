@@ -13,9 +13,9 @@ let px = 4,
 let pmx = 0;
 let pmy = 0;
 
-function preload() {
-  myFont = textFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-}
+// function preload() {
+//   myFont = textFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+// }
 
 function setup() {
   if (mobile === false) {
@@ -40,7 +40,7 @@ function draw() {
   background(BGCOLOR);
   const w = 300;
   const h = 300;
-  textFont(myFont);
+  textFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
   textAlign(CENTER, CENTER);
 
   push();
