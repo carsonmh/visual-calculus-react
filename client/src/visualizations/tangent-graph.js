@@ -14,13 +14,11 @@ let paused = true;
 
 function setup() {
   c = getColors();
-  let canvas;
   if (mobile === false) {
-    canvas = createCanvas(w, h1);
+    createCanvas(w, h1);
   } else {
-    canvas = createCanvas(screen.width - 40, h1 / 2);
+    createCanvas(screen.width - 40, h1 / 2);
   }
-  canvas.parent('canvas-holder');
   setWindow(-2, 2, -3, 3);
   background(bgcolor);
 

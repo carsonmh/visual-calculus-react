@@ -3,6 +3,9 @@ import ItemLink from '../components/ItemLink';
 import Navbar from '../components/Navbar';
 
 function Main() {
+  React.useEffect(() => {
+    return () => window.location.reload();
+  }, []);
   return (
     <>
       <Navbar />

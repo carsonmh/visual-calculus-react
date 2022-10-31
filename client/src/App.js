@@ -30,7 +30,6 @@ function App() {
       }
     });
   }, []);
-  console.log(userLoggedIn);
   return (
     <>
       <Router>
