@@ -12,18 +12,21 @@ function SubPage() {
   React.useEffect(() => {
     const script = document.createElement('script');
     const body = document.getElementById('canvas-holder');
+    const head = document.querySelector('head');
     const url =
-      'https://cdn.jsdelivr.net/gh/carsonmh/visual-calculus-react@ea839382bbccfdfa95b2574e1dc9b50877ccb4e5/client/src/visualizations/' +
+      'https://cdn.jsdelivr.net/gh/carsonmh/visual-calculus-react@3b63958f18d9c6f66fcbff233ab0f75fbd9d8148/client/src/visualizations/' +
       scriptString;
+    // script.setAttribute('defer', '');
     script.setAttribute('src', url);
-    body.appendChild(script);
+    head.appendChild(script);
 
     //best solution I could find ;(
-    setTimeout(() => {
-      if (body.childElementCount < 2) {
-        window.location.reload();
-      }
-    }, 100);
+    // setTimeout(() => {
+    //   if (body.childElementCount < 2) {
+    //     // window.location.reload();
+    //     console.log(body.childElementCount);
+    //   }
+    // }, 100);
     return () => {
       window.location.reload();
     };
