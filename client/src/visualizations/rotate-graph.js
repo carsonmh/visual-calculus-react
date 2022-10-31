@@ -15,9 +15,9 @@ let myFont;
 
 function setup() {
   if (mobile === false) {
-    createCanvas(800, 600, WEBGL);
+    createCanvas(800, 600, WEBGL).parent('canvas-holder');
   } else {
-    createCanvas(screen.width - 40, 600);
+    createCanvas(screen.width - 40, 600).parent('canvas-holder');
   }
 
   setAttributes('premultipliedAlpha', true);

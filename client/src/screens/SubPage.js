@@ -13,10 +13,17 @@ function SubPage() {
     const script = document.createElement('script');
     const body = document.getElementById('canvas-holder');
     const url =
-      'https://cdn.jsdelivr.net/gh/carsonmh/visual-calculus-react@a2b5aff9b107a1dbc1e422cc82f2318d7ab9df0b/client/src/visualizations/' +
+      'https://cdn.jsdelivr.net/gh/carsonmh/visual-calculus-react@ea839382bbccfdfa95b2574e1dc9b50877ccb4e5/client/src/visualizations/' +
       scriptString;
     script.setAttribute('src', url);
     body.appendChild(script);
+
+    //best solution I could find ;(
+    setTimeout(() => {
+      if (body.childElementCount < 2) {
+        window.location.reload();
+      }
+    }, 100);
     return () => {
       window.location.reload();
     };

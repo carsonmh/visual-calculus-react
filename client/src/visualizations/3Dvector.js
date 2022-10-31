@@ -19,9 +19,9 @@ let pmy = 0;
 
 function setup() {
   if (mobile === false) {
-    createCanvas(800, 600, WEBGL);
+    createCanvas(800, 600, WEBGL).parent('canvas-holder');
   } else {
-    createCanvas(windowWidth - 50, windowHeight / 2, WEBGL);
+    createCanvas(windowWidth - 50, windowHeight / 2, WEBGL).parent('canvas-holder');
   }
   setAttributes('premultipliedAlpha', true);
   // colors

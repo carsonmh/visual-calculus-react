@@ -18,7 +18,7 @@ let dx, dy;
 function setup() {
   c = getColors();
 
-  createCanvas(w, h1);
+  createCanvas(w, h1).parent('canvas-holder');
   const r = 8;
   setWindow(-4, r, -2, r);
   background(bgcolor);

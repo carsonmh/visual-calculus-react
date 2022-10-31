@@ -16,9 +16,9 @@ function setup() {
   c = getColors();
 
   if (getMobile() === false) {
-    createCanvas(w, h1);
+    createCanvas(w, h1).parent('canvas-holder');
   } else {
-    createCanvas(screen.width - 40, h1 / 2);
+    createCanvas(screen.width - 40, h1 / 2).parent('canvas-holder');
   }
   setWindow(-2, 10, -2, 18);
   background(bgcolor);
