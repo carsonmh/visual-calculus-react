@@ -16,10 +16,11 @@ function SubPage() {
     const body = document.getElementById('canvas-holder');
     const head = document.querySelector('head');
     const url =
-      'https://cdn.jsdelivr.net/gh/carsonmh/visual-calculus-react@aae4f223dc513c316ec7e077cea395ff16ba9c44/client/src/visualizations/' +
+      'https://cdn.jsdelivr.net/gh/carsonmh/visual-calculus-react@6e7c611163ad118027fe1dcc9c0d67c7b17e459e/client/src/visualizations/' +
       scriptString;
+    console.log(url);
     const url2 =
-      'https://cdn.jsdelivr.net/gh/carsonmh/visual-calculus-react@aae4f223dc513c316ec7e077cea395ff16ba9c44/client/src/visualizations/graphing.js';
+      'https://cdn.jsdelivr.net/gh/carsonmh/visual-calculus-react@6e7c611163ad118027fe1dcc9c0d67c7b17e459e/client/src/visualizations/graphing.js';
     const url3 = 'https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js';
     script.setAttribute('src', url);
     script2.setAttribute('src', url2);
