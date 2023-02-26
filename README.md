@@ -1,4 +1,4 @@
-# Run instructions (for the frontend only atm)
+# Run instructions (for the frontend only at the moment)
 
 1. clone repo onto machine
 2. cd into client dir
